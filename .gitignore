@@ -1,0 +1,31 @@
+# RStudio files
+.Rproj.user
+
+# History files
+.Rhistory
+.Rapp.history
+
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# R stuff
+.RData
+Rplots.pdf
+
+# Emacs stuff
+_region_.tex
+auto/
+
+# Random OS stuff
+.DS_Store
+Thumbs.db
+*.bak
+*.log
+*~
+
+# Race stuff
+PartRace.rdata
+PartRace.pdf
+

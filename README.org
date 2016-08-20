@@ -1,0 +1,85 @@
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: logdone
+#+COLUMNS: %38ITEM(Details) %7TODO(To Do) %TAGS(Context) 
+#+OPTIONS: tags:t timestamp:t todo:t TeX:t LaTeX:t          
+#+OPTIONS: skip:t @:t ::t |:t ^:t f:t
+#+TITLE:  Package ~partition~
+* Description
+
+  The partition package provides a collection of functions for a R student project.
+  The goal is to select the best algorithm for solving the partition problem with racing methods. The implementation of racing methods is provided by the package [[https://cran.r-project.org/web/packages/race/][race]].
+  The partition problem consists in finding a bi-partition of a set of integers which minimizes the difference between their sums. 
+  
+  You must choose between installing or building (for more advanced users) the package.
+
+* Prerequisites
+  This project works on 32 bits and 64 bits environment. 
+  This project requires:
+  
+  - [[http://cran.r-project.org/][R]] 3.2+
+  - [[https://sourceforge.net/projects/lpsolve/][LpSolve]] (optional)
+    - Fedora: ~dnf install lpsolve lpsolve-devel~
+  - Downloaded and installed via the R function ~install.packages~.
+    - [[https://cran.r-project.org/web/packages/devtools/index.html][devtools]]: Tools to Make Developing R Packages Easier (Build and Install only)
+    - [[https://cran.r-project.org/web/packages/race/][race]]: racing methods for the selection of the best
+    - [[https://cran.r-project.org/web/packages/lpSolve/index.html][lpSolve]]: linear programming solver (optional)
+    - [[https://cran.r-project.org/web/packages/R.utils/index.html][R.utils]]: eval with timeout
+
+* Installing
+
+  Install directly from github without downloading a local copy the project.
+
+  #+BEGIN_SRC R 
+    install.packages("devtools") # if needed
+    library(devtools)
+devtools::install_github("?")
+  #+END_SRC
+  	
+* Building  
+  
+  Download a local copy of the project, open a R session in the project directory, and execute.
+  #+BEGIN_SRC R 
+    install.packages("devtools") # if needed
+    library(devtools)
+    devtools::install()
+  #+END_SRC
+  Check the [[https://www.rstudio.com/wp-content/uploads/2015/03/devtools-cheatsheet.pdf][devtools Cheat Sheet]]. 
+
+* Executing
+
+ Once the project has been installed (see "Installing") or built (see "Building"), execute the example of the main function ~PartRace~.
+#+BEGIN_SRC R
+  library(partition)
+  example(PartRace)
+#+END_SRC
+
+If lpSolve is installed, it is possible to solve optimally small instances using mixed integer linear programming.
+#+BEGIN_SRC R
+  example(PartLpSolve)
+#+END_SRC
+
+* Documentation
+ 
+  Look for general information about the package in the R console.
+   #+BEGIN_SRC R
+     library(help=partition)
+   #+END_SRC
+
+   Look for the package documentation in the R console.
+   #+BEGIN_SRC R
+     library(partition)
+     ?partition
+   #+END_SRC
+ 
+* Contributing
+
+  - Arnaud Malapert: Associate professor, Université Côte d’Azur, CNRS, I3S, France.
+
+* License
+  Copyright (c) 2016, Arnaud Malapert, Université Côte d’Azur, CNRS, I3S, France
+  
+  This software is distributed under a MIT License.    
+
+
+

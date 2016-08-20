@@ -1,0 +1,21 @@
+Package: partition
+Title: Race to Solve the Partition Problem
+Version: 0.0.1.9000
+Authors@R: person("Arnaud", "Malapert", email = "arnaud.malapert@unice.fr", role = c("aut", "cre"))
+Description: Collection of functions for a R student project. The goal is to
+    select the best algorithm for solving the partition problem with racing
+    methods. The partition problem consists in finding a bi-partition of a set
+    of integers which minimizes the difference between their sums.
+URL: https://github.com/arnaud-m/partition
+BugReports: https://github.com/arnaud-m/partition/issues    
+Depends:
+    R (>= 3.2.3)
+License: MIT + file LICENSE
+LazyData: true
+Suggests:
+    testthat,
+    R.utils,
+    lpSolve
+RoxygenNote: 5.0.1
+Imports:
+    race
